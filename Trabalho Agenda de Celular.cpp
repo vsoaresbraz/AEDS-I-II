@@ -1,5 +1,3 @@
-//Victor Soares Braz
-//134300027
 #include <iostream>
 #include <ostream>
 #include <fstream>
@@ -18,9 +16,9 @@ struct Agenda{
        Telefone fone;
        Agenda *prox;};
        
-       Agenda *prim, *ulti, *aux; //Criaçao dos ponteiros
+       Agenda *prim, *ulti, *aux; //CriaÃ§ao dos ponteiros
      
-     void criar_lista(){     //Criaçao da Funçao Opçao 1
+     void criar_lista(){     //CriaÃ§ao da FunÃ§ao OpÃ§ao 1
                                    if(ulti==NULL){
                                                   prim=new(Agenda);
                                                   ulti=prim;
@@ -48,7 +46,7 @@ struct Agenda{
             cout<<"\n\n\n\n\n\tSeu contato foi inserido com sucesso!\n"<<flush;
             getch();
 }
-void insere_depois(Agenda *ant){//Criaçao da Funçao Opçao 2
+void insere_depois(Agenda *ant){//CriaÃ§ao da FunÃ§ao OpÃ§ao 2
      string n;
      cout<<"Digite o Nome Escolhido: ";
      cin>>n;
@@ -89,7 +87,7 @@ void insere_depois(Agenda *ant){//Criaçao da Funçao Opçao 2
       }
       }
 }
-int perc(){ //Contador que percorre a Funçao 3
+int perc(){ //Contador que percorre a FunÃ§ao 3
     int perc=0;
     Agenda *aux=prim;
     while(aux!=NULL){
@@ -99,7 +97,7 @@ int perc(){ //Contador que percorre a Funçao 3
      return perc;
 }
 
-void insere_elemento(Agenda *ant){ //Criaçao da Funçao Opçao 3
+void insere_elemento(Agenda *ant){ //CriaÃ§ao da FunÃ§ao OpÃ§ao 3
      Agenda *novo=new(Agenda);
             cout<<"Digite o Nome: ";
             cin>>novo->nome;
@@ -128,7 +126,7 @@ void insere_elemento(Agenda *ant){ //Criaçao da Funçao Opçao 3
                           }
 }
 
-void busca_contatos(Agenda *aux){ //Criaçao da Funçao Opçao 4
+void busca_contatos(Agenda *aux){ //CriaÃ§ao da FunÃ§ao OpÃ§ao 4
      string nome;
      cout<<"Pesquisar Um Contato: ";
      cin>>nome;
@@ -161,7 +159,7 @@ void busca_contatos(Agenda *aux){ //Criaçao da Funçao Opçao 4
      getch();
      }
 }
-void remove_primeiro(Agenda *aux){//Criaçao Funçao Opçao 5
+void remove_primeiro(Agenda *aux){//CriaÃ§ao FunÃ§ao OpÃ§ao 5
      if(prim==NULL){
      cout<<"= Agenda Sem Contatos Listados!            ="<<endl;
      cout<<"============================================"<<endl;
@@ -179,7 +177,7 @@ void remove_primeiro(Agenda *aux){//Criaçao Funçao Opçao 5
       }
 }
 
-Agenda* verificaanterior(){//Criaçao da Auxiliar da Funçao 7
+Agenda* verificaanterior(){//CriaÃ§ao da Auxiliar da FunÃ§ao 7
         Agenda *aux=prim;
         Agenda *ant=NULL;
         string procura;
@@ -195,7 +193,7 @@ Agenda* verificaanterior(){//Criaçao da Auxiliar da Funçao 7
         }
         return ant;
 }
-void remove_elemento(Agenda *ant){//Criaçao da Funçao Opçao 7
+void remove_elemento(Agenda *ant){//CriaÃ§ao da FunÃ§ao OpÃ§ao 7
      Agenda *aux;
      if(ant==ulti){
                    cout<<"==========Remover Elemento Desejado========="<<endl;
@@ -230,7 +228,7 @@ void remove_elemento(Agenda *ant){//Criaçao da Funçao Opçao 7
                    cout<<"\n\n\n\n\n\tContato Removido com Sucesso!\n"<<flush;
                    getch();
      }
-void ultimo_elemento(Agenda *aux){//Criaçao da Funçao Opçao 8
+void ultimo_elemento(Agenda *aux){//CriaÃ§ao da FunÃ§ao OpÃ§ao 8
      if(aux==NULL){
                    cout<<"= Agenda Sem Contatos Listados!          ="<<endl;
                    cout<<"=========================================="<<endl;
@@ -250,7 +248,7 @@ void ultimo_elemento(Agenda *aux){//Criaçao da Funçao Opçao 8
                                     cout<<"====================================\n"<<flush;
                                     getch();
 }
-void numero_de_contatos(Agenda *prim){//Criaçao da Funçao Opçao 9
+void numero_de_contatos(Agenda *prim){//CriaÃ§ao da FunÃ§ao OpÃ§ao 9
      if(prim==NULL){
                     cout<<"= Sua Agenda Possui 0 Contatos!            ="<<endl;
                     cout<<"============================================"<<endl;
@@ -272,7 +270,7 @@ void numero_de_contatos(Agenda *prim){//Criaçao da Funçao Opçao 9
                              }
                     }
 }
-void print_contatos(Agenda *aux){ //Criaçao da Funçao Opçao 10
+void print_contatos(Agenda *aux){ //CriaÃ§ao da FunÃ§ao OpÃ§ao 10
      if(aux==NULL){
                    cout<<"= Agenda Sem Contatos Listados! ="<<endl;
                    cout<<"================================="<<endl;
@@ -314,17 +312,17 @@ int main(){
              cout<<"========================================================="<<flush;
              cin>>a;
              system("cls");
-             if(a==1){//Opçao 1
+             if(a==1){//OpÃ§ao 1
                       cout<<"========= Novo Cadastro ========= \n"<<endl;
                                      criar_lista();
                                      system("cls");
              }
-             else if(a==2){//Opçao 2
+             else if(a==2){//OpÃ§ao 2
                       cout<<"=====Novo Elemento Apos Determinado Por Valor====="<<endl;
                       insere_depois(prim);
                       system("cls");
                      }
-             else if(a==3){//Opçao 3
+             else if(a==3){//OpÃ§ao 3
                   int pos, c=1, b=perc();
                   cout<<"==========Novo Contato em Posicao Desejada=========="<<endl;
                   cout<<"Digite o Local Desejado: ";
@@ -344,17 +342,17 @@ int main(){
                                         criar_lista();
                          }                                    
              }
-             else if(a==4){//Opçao 4
+             else if(a==4){//OpÃ§ao 4
                      cout<<"===========Buscar Contato==========="<<endl;
                      busca_contatos(prim);
                      system("cls");
                      }
-             else if(a==5){//Opçao 5
+             else if(a==5){//OpÃ§ao 5
                      cout<<"==============Remove o Primeiro============="<<endl;
                      remove_primeiro(prim);
                      system("cls");
                      }
-             else if(a==6){//Opçao 6
+             else if(a==6){//OpÃ§ao 6
                   cout<<"==========Remover Contato em Posicao Desejada=========="<<endl;
                   Agenda *aux=prim;
                   int pos, cont=1;
@@ -379,27 +377,27 @@ int main(){
                             }
                   system("cls");
              }
-             else if(a==7){//Opçao 7
+             else if(a==7){//OpÃ§ao 7
                      cout<<"==========Remover Elemento Desejado========="<<endl;
                      remove_elemento(verificaanterior());
                      system("cls");
                      }
-             else if(a==8){//Opçao 8
+             else if(a==8){//OpÃ§ao 8
                      cout<<"=========Ultimo Contato da Agenda========="<<endl;
                      ultimo_elemento(prim);
                      system("cls");
                      }
-             else if(a==9){//Opçao 9
+             else if(a==9){//OpÃ§ao 9
                      cout<<"=============Numero de Contatos============="<<endl;
                      numero_de_contatos(prim);
                      system("cls");
                      }
-            else if(a==10){//Opçao 10
+            else if(a==10){//OpÃ§ao 10
                      cout<<"========Todos os Contatos========"<<endl;
                      print_contatos(prim);
                      system("cls");
             }
-            else if(a==0){//Opçao 11
+            else if(a==0){//OpÃ§ao 11
                      break;
             }         
     }            
